@@ -5,7 +5,7 @@ import SVMBot
 
 class SVMBotAggressive(SVMBot.SVMBot):
     def __init__(self):
-        super().__init__("aggressive.svc")
+        super().__init__("MyBot.svc")
 
 
 if __name__ == '__main__':
