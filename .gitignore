@@ -4,3 +4,9 @@
 venv/
 
 archive/
+
+SVM/training/
+
+SVM/__pycache__/
+
+SVM/hlt/__pycache__/
