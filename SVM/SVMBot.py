@@ -58,7 +58,7 @@ class SVMBot:
 
             # Spawn some more ships
             if me.halite_amount >= constants.SHIP_COST and \
-                    not game_map[me.shipyard].is_occupied and len(me.get_ships()) <= 20:
+                    not game_map[me.shipyard].is_occupied and len(me.get_ships()) <= 24:
                 command_queue.append(self.game.me.shipyard.spawn())
 
             self.game.end_turn(command_queue)  # Send our moves back to the game environment
