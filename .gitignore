@@ -10,3 +10,5 @@ SVM/training/
 SVM/__pycache__/
 
 SVM/hlt/__pycache__/
+
+SVM/training_sets/
