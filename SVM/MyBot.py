@@ -3,11 +3,11 @@
 import SVMBot
 
 
-class SVMBotPassive(SVMBot.SVMBot):
+class SvmBot(SVMBot.SVMBot):
     def __init__(self):
         super().__init__("MyBot.svc")
 
 
 if __name__ == '__main__':
-    bot = SVMBotPassive()
+    bot = SvmBot()
     bot.run()

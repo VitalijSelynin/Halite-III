@@ -35,7 +35,7 @@ class SVMBot:
                 # Did not machine learn going back to base. Manually tell ships to return home
                 if ship.position == me.shipyard.position:
                     go_home[ship.id] = False
-                elif go_home[ship.id] or ship.halite_amount == constants.MAX_HALITE:
+                elif go_home[ship.id] or ship.halite_amount >= 9 * constants.MAX_HALITE / 10:
                     go_home[ship.id] = True
                     movement = game_map.get_safe_move(game_map[ship.position], game_map[me.shipyard.position])
                     if movement is not None:
@@ -58,7 +58,7 @@ class SVMBot:
 
             # Spawn some more ships
             if me.halite_amount >= constants.SHIP_COST and \
-                    not game_map[me.shipyard].is_occupied and len(me.get_ships()) <= 4:
+                    not game_map[me.shipyard].is_occupied and len(me.get_ships()) <= 20:
                 command_queue.append(self.game.me.shipyard.spawn())
 
             self.game.end_turn(command_queue)  # Send our moves back to the game environment
