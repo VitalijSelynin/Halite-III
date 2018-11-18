@@ -12,7 +12,7 @@ class SVMBot:
     def __init__(self, weights):
         # Get the initial game state
         game = hlt.Game()
-        game.ready("SVM-" + os.path.basename(weights))
+        game.ready(os.path.basename(weights))
 
         # During init phase: initialize the model and compile it
         my_model = model.HaliteModel(weights=weights)

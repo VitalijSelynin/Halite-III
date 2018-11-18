@@ -6,5 +6,5 @@ pydevd.settrace('localhost', port=2222, stdoutToServer=False, stderrToServer=Fal
 import HaliteBot
 
 if __name__ == '__main__':
-    bot = HaliteBot()
+    bot = HaliteBot.HaliteBot()
     bot.run()

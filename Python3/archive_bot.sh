@@ -12,4 +12,5 @@ mkdir ../archive/$foldername
 
 zipPath="../archive/$foldername/$filename"
 
-zip -ur $zipPath ./hlt MyBot.py install.sh model.py parse.py SVMBot.py MyBot.svc
+zip -ur $zipPath ./hlt MyBot.py HaliteBot.py
+zip -d $zipPath hlt/__pycache__/*

@@ -4,6 +4,27 @@ They come from game engine and changing them has no effect.
 They are strictly informational.
 """
 
+################################################
+# Local and mutable constants.
+
+"""Maximum number of steps to consider in pathfinding."""
+MAX_BFS_STEPS = 1024  # = can search a 32x32 area completely
+
+################################################
+
+"""The maximum amount of halite a ship can carry."""
+MAX_HALITE = 1000
+"""The cost to build a single ship."""
+SHIP_COST = 500
+"""The cost to build a dropoff."""
+DROPOFF_COST = 2000
+"""The maximum number of turns a game can last."""
+MAX_TURNS = 500
+"""1/EXTRACT_RATIO halite (rounded) is collected from a square per turn."""
+EXTRACT_RATIO = 4
+"""1/MOVE_COST_RATIO halite (rounded) is needed to move off a cell."""
+MOVE_COST_RATIO = 10
+
 
 def load_constants(constants):
     """
